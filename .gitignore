@@ -4,4 +4,3 @@ target/
 .DS_Store
 .bin
 hs_err_pid*.log
-Procfile
