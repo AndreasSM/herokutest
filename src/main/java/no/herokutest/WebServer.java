@@ -15,9 +15,6 @@ public class WebServer {
     }
 
     private int getPort() {
-        if (System.getenv("PORT") != null) {
-            return Integer.parseInt(System.getenv("PORT"));
-        }
         return 8080;
     }
 
