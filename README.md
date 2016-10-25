@@ -25,10 +25,10 @@ Nettsiden ligger i src/main/resources/webapp/index.html og kan naturligvis fritt
 Få prosjektet til å kjøre på Heroku
 -----------------------------------
 
-For at prosjektet skal kunne kjøre i Heroku må man legge til en fil som sier hvilken oppstartskommando Heroku skal kjøre for å starte applikasjonen. Lag en til ved siden av pom.xml som heter "Procfile", og legg til innholdet: `web: java $JAVA_OPTS -jar target/herokutest-1.0-SNAPSHOT-jar-with-dependencies.jar`
+For at prosjektet skal kunne kjøre i Heroku må man legge til en fil som sier hvilken oppstartskommando Heroku skal kjøre for å starte applikasjonen. Lag en til ved siden av pom.xml som heter "Procfile", og legg til innholdet: `web: java -jar target/herokutest-1.0-SNAPSHOT-jar-with-dependencies.jar`
 
 I tillegg trenger Heroku å kunne sette hvilken port applikasjonen skal kjøre på. Skriv om "WebServer.java" til å hente inn miljøvariabel for portnummer i funksjonen "getPort". 
-Både `PORT` og `JAVA_OPTS` er miljøvariable som settes i Heroku. 
+`PORT` er en miljøvariabel som settes i Heroku. 
 
 
 ```java
